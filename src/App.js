@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import { ChakraProvider } from "@chakra-ui/react";
+//import Fetchnew from "./Workspace/Fetchnew";
+//import Read from "./Component/Read";
+//import Expense from "./NewExpenses/Expense";
+//import MovieList from "./Component/MovieList";
+//import UserData from "./Component/UserData";
+//import Form from "./Compo/Form";
+//import Balancesheet from "./Workspace/Balancesheet";
+//import Balance from "./Workspace/Balance";
+//import News from "./Workspace/News";
+import Form from "./Formservice/form";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ChakraProvider>
+      {/* <News key="test" /> */}
+      {/* <Fetchnew /> */}
+      <Form />
+    </ChakraProvider>
   );
 }
 
