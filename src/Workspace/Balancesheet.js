@@ -632,8 +632,8 @@ const Balancesheet = () => {
             </AccordionItem>
           </Accordion>
         </Container>
-        <Stack spacing={4} direction="row" align="right  ">
-          <Button colorScheme="teal" size="lg">
+        <Stack spacing={4} direction="row">
+          <Button colorScheme="teal" size="lg" textAlign="right">
             Submit
           </Button>
         </Stack>

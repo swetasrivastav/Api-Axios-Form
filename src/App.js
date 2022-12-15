@@ -9,13 +9,15 @@ import { ChakraProvider } from "@chakra-ui/react";
 //import Balancesheet from "./Workspace/Balancesheet";
 //import Balance from "./Workspace/Balance";
 //import News from "./Workspace/News";
-import Form from "./Formservice/form";
+//import Inputform from "./Formservice/Inputform";
+import StateCityData from "./Formservice/StateCityData";
 function App() {
   return (
     <ChakraProvider>
       {/* <News key="test" /> */}
       {/* <Fetchnew /> */}
-      <Form />
+      <StateCityData />
+      {/* <Studentdata /> */}
     </ChakraProvider>
   );
 }
