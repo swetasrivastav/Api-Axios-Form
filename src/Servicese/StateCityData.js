@@ -998,8 +998,6 @@ const StateCityData = () => {
     },
   ];
 
-  // const [state, setState] = useState();
-  // const [city, setCity] = useState([]);
   const [listcity, setListCity] = useState([]);
 
   const StateChangeHandler = (e) => {

@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import "./Test";
+
 import Modal from "react-modal";
 
 function UserData() {

@@ -5,18 +5,23 @@ import { ChakraProvider } from "@chakra-ui/react";
 //import Expense from "./NewExpenses/Expense";
 //import MovieList from "./Component/MovieList";
 //import UserData from "./Component/UserData";
-//import Form from "./Compo/Form";
+//import SempleForm from "./Compo/SempleForm";
+//import Demoform from "./Compo/Demoform";
+import BilingForm from "./Compo/BilingForm";
 //import Balancesheet from "./Workspace/Balancesheet";
 //import Balance from "./Workspace/Balance";
 //import News from "./Workspace/News";
-//import Inputform from "./Formservice/Inputform";
-import StateCityData from "./Formservice/StateCityData";
+//import Inputform from "./Servicese/Inputform";
+//import StateCityData from "./Servicese/StateCityData";
 function App() {
   return (
     <ChakraProvider>
       {/* <News key="test" /> */}
+
+      <BilingForm />
+
       {/* <Fetchnew /> */}
-      <StateCityData />
+      {/* <StateCityData /> */}
       {/* <Studentdata /> */}
     </ChakraProvider>
   );
