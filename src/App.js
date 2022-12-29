@@ -1,28 +1,27 @@
 import React from "react";
 import { ChakraProvider } from "@chakra-ui/react";
-//import Fetchnew from "./Workspace/Fetchnew";
-//import Read from "./Component/Read";
-//import Expense from "./NewExpenses/Expense";
-//import MovieList from "./Component/MovieList";
-//import UserData from "./Component/UserData";
-//import SempleForm from "./Compo/SempleForm";
-//import Demoform from "./Compo/Demoform";
-import BilingForm from "./Compo/BilingForm";
-//import Balancesheet from "./Workspace/Balancesheet";
-//import Balance from "./Workspace/Balance";
-//import News from "./Workspace/News";
-//import Inputform from "./Servicese/Inputform";
-//import StateCityData from "./Servicese/StateCityData";
+//mport SempleForm from "./Compo/SempleForm";
+//import ImageApi from "./Workspace/ImageApi";
+//import Axiospost from "./Workspace/Axiospost";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Update from "./CrudOperations/Update";
+import Delete from "./CrudOperations/Delete";
+import Create from "./CrudOperations/Create";
+import Read from "./CrudOperations/Read";
 function App() {
   return (
     <ChakraProvider>
-      {/* <News key="test" /> */}
+      <div>
+        <BrowserRouter>
+          <Routes>
+            <Route exact path="/" element={<Create />} />
 
-      <BilingForm />
-
-      {/* <Fetchnew /> */}
-      {/* <StateCityData /> */}
-      {/* <Studentdata /> */}
+            <Route exact path="/read" element={<Read />} />
+            <Route path="/update" element={<Update />} />
+            <Route path="/delete" element={<Delete />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
     </ChakraProvider>
   );
 }
