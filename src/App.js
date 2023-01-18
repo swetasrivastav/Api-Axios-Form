@@ -2,7 +2,8 @@ import React from "react";
 import { ChakraProvider } from "@chakra-ui/react";
 //mport SempleForm from "./Compo/SempleForm";
 //import ImageApi from "./Workspace/ImageApi";
-//import Axiospost from "./Workspace/Axiospost";
+//import Axiospost from "./Workspace/Axiospost"
+import StateCityData from "./Servicese/StateCityData";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Update from "./CrudOperations/Update";
 import Delete from "./CrudOperations/Delete";
@@ -12,6 +13,7 @@ function App() {
   return (
     <ChakraProvider>
       <div>
+        <StateCityData />
         <BrowserRouter>
           <Routes>
             <Route exact path="/" element={<Create />} />
