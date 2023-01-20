@@ -90,6 +90,23 @@ const Array = () => {
   //     //const newArr = () => {
   //     //studentname.slice(2,4)
   //     console.log(studentname.slice(2, 4));
+
+  //filtter method for filtering
+  // setMyData(
+  //   data[0].itemdata.filter((x) => {
+  //     return (
+  //       x.financialyear === 2021 ||
+  //       x.financialyear === 2020 ||
+  //       x.financialyear === 2019
+  //     );
+  //   })
+  // );
+
+  //setMyData(data[0].itemdata.filter((x) => x.financialyear === 2021));
+  //setMyData(data[0].itemdata.filter((x) => x.financialyear === "PowerPlants"))
+
+  //var newdata = data[0].itemdata.filter((x) => x.financialyear === 2021);
+  //console.log(newdata);
 };
 
 export default Array;
