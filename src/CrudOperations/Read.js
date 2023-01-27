@@ -44,6 +44,7 @@ const Read = () => {
     localStorage.setItem("lastname", lastname);
     localStorage.setItem("email", email);
   };
+  // unuse code here
   // const getData = () => {
   //   axios
   //     .get(`https://63a92db4100b7737b98b7c07.mockapi.io/crud`)
@@ -51,6 +52,7 @@ const Read = () => {
   //       setApiData(responce.data);
   //     });
   // };
+
   const onDelete = (id) => {
     const deepvalue = JSON.parse(JSON.stringify(apiData));
     const index = deepvalue.findIndex((data) => {
