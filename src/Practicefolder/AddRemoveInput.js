@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Input, Button } from "@chakra-ui/react";
+import { Container, Input, Button, Stack } from "@chakra-ui/react";
 const AddRemoveInput = () => {
   const [val, setVal] = useState([]);
 
@@ -17,10 +17,14 @@ const AddRemoveInput = () => {
     deleteval.splice(i, 1);
     setVal(deleteval);
   };
-  console.log(val, "data-");
+  console.log(val, "data");
   return (
     <>
-      <button onClick={handleAdd}>Add</button>
+      <Stack direction="row" m="5">
+        <Button colorScheme="teal" size="lg" onClick={handleAdd}>
+          Add
+        </Button>
+      </Stack>
       {val.map((data, i) => {
         return (
           <>

@@ -14,6 +14,19 @@ import {
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
+const deleteTable = async (id) => {
+  try {
+    const response = await fetch(
+      `https://63a92db4100b7737b98b7c07.mockapi.io/crud/${id}`,
+      {
+        method: "POST",
+      }
+    );
+    console.log(response);
+  } catch (error) {
+    console.log(error);
+  }
+};
 const Read = () => {
   const [apiData, setApiData] = useState([]);
   useEffect(() => {
@@ -31,20 +44,25 @@ const Read = () => {
     localStorage.setItem("lastname", lastname);
     localStorage.setItem("email", email);
   };
-  const getData = () => {
-    axios
-      .get(`https://63a92db4100b7737b98b7c07.mockapi.io/crud`)
-      .then((responce) => {
-        setApiData(responce.data);
-      });
-  };
+  // const getData = () => {
+  //   axios
+  //     .get(`https://63a92db4100b7737b98b7c07.mockapi.io/crud`)
+  //     .then((responce) => {
+  //       setApiData(responce.data);
+  //     });
+  // };
   const onDelete = (id) => {
-    axios
-      .get(`https://63a92db4100b7737b98b7c07.mockapi.io/crud/${id}`)
-      .then(() => {
-        getData();
-        console.log(id);
-      });
+    const deepvalue = JSON.parse(JSON.stringify(apiData));
+    const index = deepvalue.findIndex((data) => {
+      if (data.id === id) {
+        return true;
+      }
+    });
+    if (index !== -1) {
+      deepvalue.splice(index, 1);
+    }
+    setApiData(deepvalue);
+    deleteTable(id);
   };
   return (
     <div>
@@ -88,21 +106,19 @@ const Read = () => {
                         </Link>
                       </Td>
                       <Td>
-                        <Link to="/delete">
-                          <Button
-                            colorScheme="red"
-                            onClick={() =>
-                              onDelete(
-                                value.id,
-                                value.name,
-                                value.lastname,
-                                value.email
-                              )
-                            }
-                          >
-                            Delete
-                          </Button>
-                        </Link>
+                        <Button
+                          colorScheme="red"
+                          onClick={() =>
+                            onDelete(
+                              value.id,
+                              value.name,
+                              value.lastname,
+                              value.email
+                            )
+                          }
+                        >
+                          Delete
+                        </Button>
                       </Td>
                     </Tr>
                   );
